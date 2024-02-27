@@ -59,9 +59,9 @@ public class ImageResize
 
     private static void ProcessImages(string inputFolderPath, string outputFolderPath, int incrementWidth, int incrementHeight)
     {
-        foreach (var filename in Directory.EnumerateFiles(inputFolderPath, "*.jpg", SearchOption.AllDirectories))
+        foreach (var filename in Directory.EnumerateFiles(inputFolderPath, "*.png", SearchOption.AllDirectories))
         {
-            string outputPath = Path.Combine(outputFolderPath, Path.GetFileNameWithoutExtension(filename) + "_resized.jpg");
+            string outputPath = Path.Combine(outputFolderPath, Path.GetFileNameWithoutExtension(filename) + "_resized.png");
 
             ResizeImage(filename, outputPath, incrementWidth, incrementHeight);
         }
